@@ -1,0 +1,259 @@
+
+/* 1. Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b1120;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+/* 2. Navigation bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111827;
+    border-bottom: 1px solid #263449;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h2 {
+    color: #38bdf8;
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* 3. Common section design */
+section {
+    padding: 80px 10%;
+    scroll-margin-top: 75px;
+}
+
+section h2 {
+    font-size: 30px;
+    color: #38bdf8;
+    margin-bottom: 22px;
+}
+
+/* 4. Home section */
+#home {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background:
+        radial-gradient(ellipse at 85% 20%,
+        #153552 0%, #0b1120 55%);
+}
+
+#home h1 {
+    font-size: clamp(36px, 6vw, 60px);
+    line-height: 1.2;
+    color: white;
+}
+
+#home h2 {
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+#home p {
+    max-width: 600px;
+    color: #b8c5d8;
+    margin-bottom: 28px;
+}
+
+#home a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: #07111f;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#home a:hover {
+    background: #7dd3fc;
+    transform: translateY(-3px);
+}
+
+/* 5. About and skills */
+#about p,
+#skills p {
+    max-width: 750px;
+    color: #cbd5e1;
+}
+
+/* 6. Projects */
+.project {
+    background: #151f32;
+    border: 1px solid #29384f;
+    padding: 25px;
+    margin: 18px 0;
+    border-radius: 12px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.project h3 {
+    color: #7dd3fc;
+    margin-bottom: 8px;
+}
+
+/* 7. Contact */
+#contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* 8. Footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    background: #111827;
+    border-top: 1px solid #263449;
+    color: #94a3b8;
+}
+
+/* 9. Mobile-friendly layout */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+
+    #home {
+        min-height: 70vh;
+    }
+
+    #home h2 {
+        font-size: 21px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+}
+/* Improved home section */
+#home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+#home .greeting {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+#home h1 span {
+    color: #38bdf8;
+}
+
+#home .intro {
+    max-width: 520px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#home .hero-buttons a {
+    margin-top: 5px;
+}
+
+#home .secondary-btn {
+    background: transparent;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+}
+
+.hero-image {
+    flex: 0 0 280px;
+}
+
+.hero-image img {
+    display: block;
+    width: 280px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 35px #38bdf833;
+}
+
+@media (max-width: 700px) {
+    #home {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 55px;
+    }
+
+    .hero-image {
+        flex: none;
+        align-self: center;
+    }
+
+    .hero-image img {
+        width: 230px;
+        height: 260px;
+    }
+}
