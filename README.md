@@ -46,7 +46,7 @@ How to Run the Project
 
 You can also open the folder in Visual Studio Code and use a local development server.
 
-💡 Projects Featured
+Projects Featured
 
 1. Calculator App
 

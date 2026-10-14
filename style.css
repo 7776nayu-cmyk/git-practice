@@ -6,12 +6,31 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #0b1120;
-    color: #e2e8f0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #0b1020,
+        #17143a,
+        #102b46,
+        #0b1020
+    );
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    color: #f8fafc;
     line-height: 1.7;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* 2. Navigation bar */
@@ -62,16 +81,25 @@ section h2 {
 
 /* 4. Home section */
 #home {
-    min-height: 82vh;
+    min-height: 85vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background:
-        radial-gradient(ellipse at 85% 20%,
-        #153552 0%, #0b1120 55%);
-}
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(168, 85, 247, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(72, 229, 232, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #0b1020, #17143a, #102b46);
+}
 #home h1 {
     font-size: clamp(36px, 6vw, 60px);
     line-height: 1.2;
@@ -256,4 +284,20 @@ footer {
         width: 230px;
         height: 260px;
     }
+}
+.project {
+    background: linear-gradient(
+        135deg,
+        rgba(30, 41, 75, 0.95),
+        rgba(31, 22, 61, 0.95)
+    );
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: #48e5e8;
+    box-shadow: 0 0 25px rgba(72, 229, 232, 0.2);
 }
